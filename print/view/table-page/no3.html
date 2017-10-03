@@ -1,0 +1,236 @@
+<div class="container-fluid view-content">
+	<div class="row">
+		<div class="col-xs-12">
+			<button type="button" ng-click="goback()" class="btn btn-primary pull-left">返回</button>
+			<button type="button" ng-click="Print()" class="btn btn-primary pull-right">打印当前页</button>
+			<button id="savedatabtn" type="button" ng-click="Save()" style="margin-right: 10px;" class="btn btn-primary pull-right">保存</button>
+		</div>
+	</div>
+	
+	<div class="print-wrapper">
+		<div class="table-data-load">
+			<img src="style/image/page-loading.gif" alt="loading...">
+		</div>
+		<!-- 上一张 -->
+		<div class="show-table-prev" ng-click="slide_prev()">
+			<<上一张
+		</div>
+		<!-- 下一张 -->
+		<div class="show-table-next" ng-click="slide_next()">
+			下一张>>
+		</div>
+		
+		<!-- NO.3 -->
+		<div class="table-item">
+			<div class="table-wrapper" style="position:relative;width: 664px;height: 952px;margin: 0 auto;font-family: 'SimHei';color: #000;padding:20px 30px;font-size: 16px;">
+
+				<div id="no3" style="display: none;">
+					<div style="box-sizing: border-box;padding: 98px 53px 0 61px;">
+						<table style="width: 511px;" cellspacing="0" border="0">
+							<tbody>
+								<tr>
+									<td style="width: 165px;height: 72px"></td>
+									<td style="width: 355px;word-break: break-all;">{{name1}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px"></td>
+									<td style="width: 355px;word-break: break-all;">{{name2}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px"></td>
+									<td style="width: 355px;word-break: break-all;">{{identity}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px"></td>
+									<td style="width: 355px;">
+										<table cellspacing="0" border="0" style="text-align: center;">
+											<tr>
+												<td style="width: 56px;">{{landAddress_zhen}}</td>
+												<td style="width: 83px;"></td>
+												<td style="width: 68px;">{{landAddress_cun}}</td>
+												<td style="width: 78px;"></td>
+												<td style="width: 38px;">{{landAddress_zu}}</td>
+												<td style="width: 20px;"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 72px"></td>
+									<td style="width: 355px;word-break: break-all;">{{landArea}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px"></td>
+									<td style="width: 355px;word-break: break-all;">{{landTotal}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px"></td>
+									<td style="width: 355px;word-break: break-all;">{{circulationMode}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px"></td>
+									<td style="width: 355px;word-break: break-all;">{{payment}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px"></td>
+									<td style="width: 355px;">
+										<table cellspacing="0" border="0" style="text-align: center;">
+											<tr>
+												<td style="width: 65px">{{term_begin_year}}</td>
+												<td style="width: 19px"></td>
+												<td style="width: 26px">{{term_begin_month}}</td>
+												<td style="width: 14px"></td>
+												<td style="width: 14px">{{term_begin_date}}</td>
+												<td style="width: 60px"></td>
+												<td style="width: 45px">{{term_over_year}}</td>
+												<td style="width: 19px"></td>
+												<td style="width: 19px">{{term_over_month}}</td>
+												<td style="width: 19px"></td>
+												<td style="width: 19px">{{term_over_date}}</td>
+												<td style="width: 40px"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 72px"></td>
+									<td style="width: 355px;word-break: break-all;">{{purpose}}</td>
+								</tr>
+							</tbody>
+						</table>
+						
+					</div>
+				</div>
+	
+				<div class="table-head" style="padding-left: 20px;font-size: 20px;position: relative;">NO.3
+					<div style="position: absolute;top: 0;left: 0;width: 100%;text-align: center;font-family: '宋体';font-weight: bold;font-size: 22px;">
+						农村土地经营权基本情况登记表
+					</div>
+				</div>
+				<div class="table-content">
+					<table border="1" style="border-color: #000;" cellspacing="0">
+						<tbody>
+							<tr style="width: 100%;">
+								<td align="center" style="width:200px;height: 100px">经营业主名称</td>
+								<td style="width: 403px;padding-left: 10px;">
+									<textarea ng-model="name1" rows="3" style="width: 350px"></textarea>
+									<span class="showdata">{{name1}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 65px">法定代表人姓名</td>
+								<td style="padding-left: 10px;">
+									<input type="text" ng-model="name2" style="width: 360px">
+									<span class="showdata">{{name2}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 75px">身份证号码</td>	
+								<td style="padding-left: 10px;">
+									<input type="text" ng-model="identity" style="width: 360px">
+									<span class="showdata">{{identity}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 95px">土地区位</td>
+								<td style="padding-left: 10px;">
+									<input type="text" ng-model="landAddress_zhen" style="width: 75px">
+									<span class="showdata" style="width: 70px">
+										{{landAddress_zhen}}
+									</span>
+									镇(街道)
+									<input type="text" ng-model="landAddress_cun" style="width: 75px">
+									<span  class="showdata" style="width: 85px">
+										{{landAddress_cun}}
+									</span>
+									村(社区)
+									<input type="text" ng-model="landAddress_zu" style="width: 40px">
+									<span  class="showdata" style="width: 45px">
+										{{landAddress_zu}}
+									</span>
+									组
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 90px">土地总面积（亩）</td>
+								<td style="padding-left: 10px;">
+									<input type="text" ng-model="landArea" style="width: 360px">
+									<span  class="showdata">
+										{{landArea}}
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">地块总数（块）</td>
+								<td style="padding-left: 10px;">
+									<input type="text" ng-model="landTotal" style="width: 360px">
+									<span  class="showdata">
+										{{landTotal}}
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">土地流转方式</td>
+								<td style="padding-left: 10px;">
+									<input type="text" ng-model="circulationMode" style="width: 360px">
+									<span  class="showdata">
+										{{circulationMode}}
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">流转费支付方式</td>
+								<td style="padding-left: 10px;">
+									<input type="text" ng-model="payment" style="width: 360px">
+									<span  class="showdata">
+										{{payment}}
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">经营期限</td>
+								<td style="padding-left: 0px; font-size: 12px">
+									<input type="text" ng-model="term_begin_year" style="width: 50px">
+									<span  class="showdata" style="width: 55px">
+										{{term_begin_year}}
+									</span>年
+									<input type="text" ng-model="term_begin_month" style="width: 30px">
+									<span class="showdata" style="width: 35px">
+										{{term_begin_month}}
+									</span>月
+									<input type="text" ng-model="term_begin_date" style="width: 40px">
+									<span class="showdata" style="width: 52px">
+										{{term_begin_date}}
+									</span>日起至
+									<input type="text" ng-model="term_over_year" style="width: 45px">
+									<span class="showdata" style="width: 45px">
+										{{term_over_year}}
+									</span>年
+									<input type="text" ng-model="term_over_month" style="width: 24px">
+									<span class="showdata" style="width: 26px">
+										{{term_over_month}}
+									</span>月
+									<input type="text" ng-model="term_over_date" style="width: 22px">
+									<span class="showdata" style="width: 23px">
+										{{term_over_date}}
+									</span>日止
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">土地用途</td>
+								<td style="padding-left: 10px;">
+									<input type="text" ng-model="purpose" style="width: 360px">
+									<span class="showdata">
+										{{purpose}}
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+</div>

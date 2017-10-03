@@ -1,0 +1,144 @@
+<div class="container-fluid view-content">
+	<div class="row">
+		<div class="col-xs-12">
+			<button type="button" ng-click="goback()" class="btn btn-primary pull-left">返回</button>
+			<button type="button" ng-click="Print()" class="btn btn-primary pull-right">打印当前页</button>
+			<button id="savedatabtn" type="button" ng-click="Save()" style="margin-right: 10px;" class="btn btn-primary pull-right">保存</button>
+		</div>
+	</div>
+	
+	<div class="print-wrapper">
+		<div class="table-data-load">
+			<img src="style/image/page-loading.gif" alt="loading...">
+		</div>
+		<!-- 上一张 -->
+		<div class="show-table-prev" ng-click="slide_prev()">
+			<<上一张
+		</div>
+		<!-- 下一张 -->
+		<div class="show-table-next" ng-click="slide_next()">
+			下一张>>
+		</div>
+		
+		<!-- NO.7 -->
+		<div class="table-item">
+			<div class="table-wrapper" style="position:relative;width: 664px;height: 952px;margin: 0 auto;font-family: 'SimHei';color: #000;padding:0px 20px;padding-top:20px;font-size: 16px;">
+
+				
+
+				<div id="no7" style="display: none;">
+					<div style="position: absolute;bottom: 26px;right: 205px">{{no7_date_year}}</div>
+					<div style="position: absolute;bottom: 26px;right: 145px">{{no7_date_month}}</div>
+					<div style="position: absolute;bottom: 26px;right: 100px">{{no7_date_date}}</div>
+					<div style="box-sizing: border-box;padding: 98px 45px 0 0px;">
+						<table style="width: 511px;" cellspacing="0" border="0" cellpadding="10">
+							<tbody>
+								<tr>
+									<td style="height: 72px;width: 160px"></td>
+									<td style="width: 350px"></td>
+								</tr>
+								<tr>
+									<td style="height: 97px;text-align: center;">{{no7[0].address}}</td>
+									<td style="word-break: break-all;">{{no7[0].landNumber}}</td>
+								</tr>
+								<tr>
+									<td style="height: 97px;text-align: center;">{{no7[1].address}}</td>
+									<td style="word-break: break-all;">{{no7[1].landNumber}}</td>
+								</tr>
+								<tr>
+									<td style="height: 97px;text-align: center;">{{no7[2].address}}</td>
+									<td style="word-break: break-all;">{{no7[2].landNumber}}</td>
+								</tr>
+								<tr>
+									<td style="height: 97px;text-align: center;">{{no7[3].address}}</td>
+									<td style="word-break: break-all;">{{no7[3].landNumber}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="table-head" style="padding-left: 20px;font-size: 20px;position: relative;">NO.7
+					<div style="position: absolute;top: 0;left: 0;width: 100%;text-align: center;font-family: '宋体';font-weight: bold;font-size: 22px;">
+						农村土地经营权地块登记表（四）
+					</div>
+				</div>
+				<div class="table-content" style="font-size: 18px;">
+					<table border="1" style="border-color: #000;text-align: center;" cellspacing="0">
+						<tbody>
+							<tr style="height: 76px;">
+								<td style="width:250px;padding: 20px 0;">位置（村组）</td>
+								<td>地块编号</td>
+							</tr>
+							<tr>
+								<td style="height: 115px">
+									<input type="text" ng-model="no7[0].address" style="width: 170px">
+									<span>{{no7[0].address}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no7[0].landNumber" rows="3" style="width: 300px"></textarea>
+									<span>{{no7[0].landNumber}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 115px">
+									<input type="text" ng-model="no7[1].address" style="width: 170px">
+									<span>{{no7[1].address}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no7[1].landNumber" rows="3" style="width: 300px"></textarea>
+									<span>{{no7[1].landNumber}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 115px">
+									<input type="text" ng-model="no7[2].address" style="width: 170px">
+									<span>{{no7[2].address}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no7[2].landNumber" rows="3" style="width: 300px"></textarea>
+									<span>{{no7[2].landNumber}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 115px">
+									<input type="text" ng-model="no7[3].address" style="width: 170px">
+									<span>{{no7[3].address}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no7[3].landNumber" rows="3" style="width: 300px"></textarea>
+									<span>{{no7[3].landNumber}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height:335px;">
+									登<br>记<br>机<br>关
+								</td>
+								<td style="padding: 0px 20px;text-align: left;font-family: '楷体';line-height: 1.8;">
+									<p style="text-indent: 2em">经审查，符合《重庆市荣昌区农村土地经权证管理办法》（试行）相关规定。特发此证。</p><br>
+									<div style="padding-left: 100px;padding-top: 25px" class="dengjijiguan">
+										登记机关（盖章）
+										<div>
+											<input type="text" ng-model="no7_date_year" style="width: 50px">
+											<span style="width: 102px;">{{no7_date_year}}</span>
+											年
+											<input type="text" ng-model="no7_date_month" style="width: 37px">
+											<span style="width: 25px;">{{no7_date_month}}</span>
+											月
+											<input type="text" ng-model="no7_date_date" style="width: 40px">
+											<span style="width: 30px;">{{no7_date_date}}</span>
+											日
+										</div>
+									</div>
+									
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+</div>

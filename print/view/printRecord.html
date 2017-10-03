@@ -1,0 +1,66 @@
+<div class="container-fluid view-content">
+	<div class="form-wrapper">
+		<label>年：</label>
+		<select id="selectforyear" class="form-control">
+			<option ng-repeat="year in opyear" value="{{year}}">{{year}}</option>
+		</select>
+		<label>月：</label>
+		<select id="selectformonth" class="form-control">
+			<option ng-repeat="month in omonth" value="{{month}}">{{month}}</option>
+		</select>
+		<div class="search-wrapper">
+			<input type="text" ng-model="searchtxt" class="form-control">
+			<button ng-click="txtsearch()" type="button" class="btn btn-primary">
+				<span class="glyphicon glyphicon-search"></span>
+				搜索
+			</button>
+		</div>
+	
+		<a type="button" ui-sref="no2({action:'edit'})" class="btn btn-primary">新建打印</a>
+	</div>
+	<div class="table-data-load">
+		<img src="style/image/page-loading.gif" alt="loading...">
+	</div>
+	<table style="margin-top: 30px;text-align: center;" class="table table-hover table-bordered">
+		<thead>
+			<tr style="background-color: #f3f3f5">
+				<th>序号</th>
+				<th>ID</th>
+				<th>页数</th>
+				<th>打印时间</th>
+				<th>打印人</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in filelist">
+				<td>{{$index+1}}</td>
+				<td>({{item.info1}})农地经营权证({{item.info2}})第{{item.info3}}号</td>
+				<td>{{item.page}}</td>
+				<td>{{item.p_date | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+				<td>{{item.p_people}}</td>
+				<td>
+					<a href="javascript:void(0);" ng-click="yulan(item.id,item.page)">预览</a>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" ng-hide="filelist.length">无记录</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="navPagination clearfix">
+		<div class="pag-total pull-left">共 {{total}} 条数据</div>
+		<ul class="pagination pull-left" id="navpage">
+			<li><a href="javascript:void(0);" ng-click="togglePage(page-1)">&laquo;</a></li>
+
+			<li ng-show="page>5"><a>···</a></li>
+			<li ng-repeat="pag in pagition" ng-show="pag>(page-5)&&pag<(page+5)" ng-class="{'active':page==pag}">
+				<a href="javascript:void(0);" ng-click="togglePage(pag)">{{pag}}</a>
+			</li>
+			<li ng-show="page<5&&pagition.length>5"><a>···</a></li>
+
+			<li><a href="javascript:void(0);" ng-click="togglePage(page+1)">&raquo;</a></li>
+		</ul>
+		
+	</div>
+</div>

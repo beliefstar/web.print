@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="Main">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Document</title>
+
+		<link rel="stylesheet" type="text/css" href="style/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style/default.css">
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="lib/angular.min.js"></script>
+ 		<script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+	</head>
+	<body>
+
+		<div id="state-modal" class="modal fade" tabindex="-1" role="dialog">
+		  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">提示</h4>
+		      </div>
+		      <div class="modal-body">
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<div ng-controller="changepwdCtrl" id="changepwd-modal" class="modal fade" tabindex="-1" role="dialog">
+		  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">修改密码</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<div class="changepwdstate">
+		      		<img src="style/image/page-loading.gif" alt="loading...">
+		      	</div>
+		      	<div class="form-group">
+					<input type="password" ng-model="oldpwd" class="form-control" placeholder="旧密码">
+				</div>
+				<div class="form-group">
+					<input type="password" ng-model="newpwd" class="form-control" placeholder="新密码">
+				</div>
+				<div style="display: none;" class="alert alert-danger" role="alert">密码不可为空！</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		        <button type="button" ng-click="btn($event)" class="btn btn-primary">确定</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="onload-page">
+			<img src="style/image/page-loading.gif" alt="loading...">
+		</div>
+
+		<div class="page-nav-wrapper">
+			<div class="user-wrapper">
+				<img src="style/image/user.jpg" alt="user"><br>
+				<span style="color: #eee">rongchang2017</span><br>
+				<span>打印员</span>
+			</div>
+
+			<ul ng-controller="navigationCtrl" class="page-nav">
+				<li ng-repeat="item in navitem">
+					<a ng-click="navaction($index)" ng-class="indexactive==$index?'active':''" ui-sref="{{item.sref}}">{{item.title}}</a>
+				</li>
+			</ul>
+
+		</div>
+		<div class="page-content-wrapper">
+
+			<div ng-controller="contentHeadCtrl" class="page-content-head">
+				<div class="exit-wrapper">
+					<span class="glyphicon glyphicon-home"></span>
+					欢迎登录后台
+					<a ng-click="changepwd()" href="javascript:void(0);">
+						<span class="glyphicon glyphicon-pencil"></span>
+						修改密码
+					</a>
+					<a ng-click="exit()" href="javascript:void(0);">
+						<span class="glyphicon glyphicon-log-out"></span>
+						退出
+					</a>
+				</div>
+			</div>
+
+			<div class="page-content">
+				<div ui-view></div>
+			</div>
+			
+		</div>
+
+		
+		
+		<script type="text/javascript" src="lib/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="common/checkState.js"></script>
+		<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+		<script type="text/javascript" src="Router.js"></script>
+		<script type="text/javascript" src="controller/MainController.js"></script>
+		<script type="text/javascript" src="service/MainService.js"></script>
+		<script type="text/javascript" src="controller/PageController.js"></script>
+	</body>
+</html>

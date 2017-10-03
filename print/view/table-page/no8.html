@@ -1,0 +1,320 @@
+<div class="container-fluid view-content">
+	<div class="row">
+		<div class="col-xs-12">
+			<button type="button" ng-click="goback()" class="btn btn-primary pull-left">返回</button>
+			<button type="button" ng-click="Print()" class="btn btn-primary pull-right">打印当前页</button>
+			<button id="savedatabtn" type="button" ng-click="Save()" style="margin-right: 10px;" class="btn btn-primary pull-right">保存</button>
+		</div>
+	</div>
+	<div class="print-wrapper">
+		<div class="table-data-load">
+			<img src="style/image/page-loading.gif" alt="loading...">
+		</div>
+		<!-- 上一张 -->
+		<div class="show-table-prev" ng-click="slide_prev()">
+			<<上一张
+		</div>
+		<!-- NO.8 -->
+		<div class="table-item">
+			<div class="table-wrapper" style="position:relative;width: 664px;height: 952px;margin: 0 auto;font-family: 'SimHei';color: #000;padding:80px 20px;font-size: 16px;">
+
+				<div id="no8" style="display: none;">
+					<div style="box-sizing: border-box;padding: 98px 0px 0 57px;">
+						<table style="width: 510px;text-align: center;table-layout:fixed; word-break: break-all; word-wrap: break-word;" cellspacing="0" border="0" cellpadding="5">
+							<tbody>
+								<tr>
+									<td style="width: 102px;height: 72px;"></td>
+									<td style="width: 102px;"></td>
+									<td style="width: 102px;"></td>
+									<td style="width: 102px;"></td>
+									<td style="width: 102px;"></td>
+								</tr>
+								<tr>
+									<td style="height: 72px;">{{no8[0].changeMode}}</td>
+									<td>{{no8[0].area}}</td>
+									<td>{{no8[0].hetongID}}</td>
+									<td>{{no8[0].landID}}</td>
+									<td>{{no8[0].info}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px;">{{no8[1].changeMode}}</td>
+									<td>{{no8[1].area}}</td>
+									<td>{{no8[1].hetongID}}</td>
+									<td>{{no8[1].landID}}</td>
+									<td>{{no8[1].info}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px;">{{no8[2].changeMode}}</td>
+									<td>{{no8[2].area}}</td>
+									<td>{{no8[2].hetongID}}</td>
+									<td>{{no8[2].landID}}</td>
+									<td>{{no8[2].info}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px;">{{no8[3].changeMode}}</td>
+									<td>{{no8[3].area}}</td>
+									<td>{{no8[3].hetongID}}</td>
+									<td>{{no8[3].landID}}</td>
+									<td>{{no8[3].info}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px;">{{no8[4].changeMode}}</td>
+									<td>{{no8[4].area}}</td>
+									<td>{{no8[4].hetongID}}</td>
+									<td>{{no8[4].landID}}</td>
+									<td>{{no8[4].info}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px;">{{no8[5].changeMode}}</td>
+									<td>{{no8[5].area}}</td>
+									<td>{{no8[5].hetongID}}</td>
+									<td>{{no8[5].landID}}</td>
+									<td>{{no8[5].info}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px;">{{no8[6].changeMode}}</td>
+									<td>{{no8[6].area}}</td>
+									<td>{{no8[6].hetongID}}</td>
+									<td>{{no8[6].landID}}</td>
+									<td>{{no8[6].info}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px;">{{no8[7].changeMode}}</td>
+									<td>{{no8[7].area}}</td>
+									<td>{{no8[7].hetongID}}</td>
+									<td>{{no8[7].landID}}</td>
+									<td>{{no8[7].info}}</td>
+								</tr>
+								<tr>
+									<td style="height: 72px;">{{no8[8].changeMode}}</td>
+									<td>{{no8[8].area}}</td>
+									<td>{{no8[8].hetongID}}</td>
+									<td>{{no8[8].landID}}</td>
+									<td>{{no8[8].info}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="table-head" style="padding-left: 20px;font-size: 20px;position: relative;">NO.8
+					<div style="position: absolute;top: 0;left: 0;width: 100%;text-align: center;font-family: '宋体';font-weight: bold;font-size: 22px;">
+						农村土地经营权变更登记
+					</div>
+				</div>
+				<div class="table-content" style="font-size: 16px;">
+					<table border="1" style="border-color: #000;text-align: center;width: 100%" cellspacing="0" cellpadding="5">
+						<tbody>
+							<tr style="height: 76px;">
+								<td style="width: 115px;padding: 5px 8px">变更方式</td>
+								<td style="width: 95px;padding: 5px 8px">面积（亩）</td>
+								<td style="width: 100px;padding: 5px 8px">合同编号</td>
+								<td style="width: 100px;padding: 5px 8px">地块编号</td>
+								<td style="width: 107px;padding: 5px 8px">登记机关<br>签章及日期</td>
+							</tr>
+							<tr>
+								<td style="height: 76px;">
+									<textarea ng-model="no8[0].changeMode" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[0].changeMode}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[0].area" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[0].area}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[0].hetongID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[0].hetongID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[0].landID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[0].landID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[0].info" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[0].info}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 80px;">
+									<textarea ng-model="no8[1].changeMode" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[1].changeMode}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[1].area" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[1].area}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[1].hetongID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[1].hetongID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[1].landID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[1].landID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[1].info" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[1].info}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 76px;">
+									<textarea ng-model="no8[2].changeMode" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[2].changeMode}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[2].area" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[2].area}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[2].hetongID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[2].hetongID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[2].landID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[2].landID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[2].info" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[2].info}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 95px;">
+									<textarea ng-model="no8[3].changeMode" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[3].changeMode}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[3].area" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[3].area}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[3].hetongID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[3].hetongID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[3].landID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[3].landID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[3].info" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[3].info}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 78px;">
+									<textarea ng-model="no8[4].changeMode" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[4].changeMode}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[4].area" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[4].area}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[4].hetongID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[4].hetongID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[4].landID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[4].landID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[4].info" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[4].info}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 83px;">
+									<textarea ng-model="no8[5].changeMode" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[5].changeMode}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[5].area" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[5].area}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[5].hetongID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[5].hetongID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[5].landID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[5].landID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[5].info" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[5].info}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 86px;">
+									<textarea ng-model="no8[6].changeMode" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[6].changeMode}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[6].area" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[6].area}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[6].hetongID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[6].hetongID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[6].landID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[6].landID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[6].info" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[6].info}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 90px;">
+									<textarea ng-model="no8[7].changeMode" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[7].changeMode}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[7].area" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[7].area}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[7].hetongID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[7].hetongID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[7].landID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[7].landID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[7].info" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[7].info}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 94px;">
+									<textarea ng-model="no8[8].changeMode" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[8].changeMode}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[8].area" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[8].area}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[8].hetongID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[8].hetongID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[8].landID" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[8].landID}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no8[8].info" rows="3" style="width: 100%"></textarea>
+									<span>{{no8[8].info}}</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

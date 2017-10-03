@@ -1,0 +1,172 @@
+<div class="container-fluid view-content">
+	<div class="row">
+		<div class="col-xs-12">
+			<button type="button" ng-click="goback()" class="btn btn-primary pull-left">返回</button>
+			<button type="button" ng-click="Print()" class="btn btn-primary pull-right">打印当前页</button>
+			<button id="savedatabtn" type="button" ng-click="Save()" style="margin-right: 10px;" class="btn btn-primary pull-right">保存</button>
+		</div>
+	</div>
+	
+	<div class="print-wrapper">
+		<div class="table-data-load">
+			<img src="style/image/page-loading.gif" alt="loading...">
+		</div>
+		<!-- 上一张 -->
+		<div class="show-table-prev" ng-click="slide_prev()">
+			<<上一张
+		</div>
+		<!-- 下一张 -->
+		<div class="show-table-next" ng-click="slide_next()">
+			下一张>>
+		</div>
+		<!-- NO.4 -->
+		<div class="table-item">
+			<div class="table-wrapper" style="position:relative;width: 664px;height: 952px;margin: 0 auto;font-family: 'SimHei';color: #000;padding:0px 20px;padding-top:80px;font-size: 16px;transform: translateY(-50px);">
+
+				
+				<div id="no4" style="display: none;">
+					<div style="box-sizing: border-box;padding: 108px 53px 0 70px;">
+						<table style="width: 490px;" cellspacing="0" border="0">
+							<tbody>
+								<tr>
+									<td style="height: 68px;width: 175px;"></td>
+									<td style="width: 345px"></td>
+								</tr>
+								<tr>
+									<td style="height: 90px">{{no4[0].address}}</td>
+									<td style="word-break: break-all;">
+										{{no4[0].landNumber}}
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 90px">{{no4[1].address}}</td>
+									<td style="word-break: break-all;">
+										{{no4[1].landNumber}}
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 90px">{{no4[2].address}}</td>
+									<td style="word-break: break-all;">
+										{{no4[2].landNumber}}
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 90px">{{no4[3].address}}</td>
+									<td style="word-break: break-all;">
+										{{no4[3].landNumber}}
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 90px">{{no4[4].address}}</td>
+									<td style="word-break: break-all;">
+										{{no4[4].landNumber}}
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 90px">{{no4[5].address}}</td>
+									<td style="word-break: break-all;">
+										{{no4[5].landNumber}}
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 90px">{{no4[6].address}}</td>
+									<td style="word-break: break-all;">
+										{{no4[6].landNumber}}
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="table-head" style="padding-left: 20px;font-size: 20px;position: relative;">NO.4
+					<div style="position: absolute;top: 0;left: 0;width: 100%;text-align: center;font-family: '宋体';font-weight: bold;font-size: 22px;">
+						农村土地经营权地块登记表（一）
+					</div>
+				</div>
+				<div class="table-content" style="font-size: 18px;">
+					<table border="1" style="border-color: #000;text-align: center;" cellspacing="0">
+						<tbody>
+							<tr style="height: 76px;">
+								<td style="width:253px;padding: 20px 0;">位置（村组）</td>
+								<td style="width: 370px">地块编号</td>
+							</tr>
+							<tr>
+								<td style="height: 105px;">
+									<input type="text" ng-model="no4[0].address" style="width: 170px">
+									<span class="showdata">{{no4[0].address}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no4[0].landNumber" rows="3" style="width: 300px"></textarea>
+									<span class="showdata">{{no4[0].landNumber}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 105px;">
+									<input type="text" ng-model="no4[1].address" style="width: 170px">
+									<span class="showdata">{{no4[1].address}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no4[1].landNumber" rows="3" style="width: 300px"></textarea>
+									<span class="showdata">{{no4[1].landNumber}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 105px;">
+									<input type="text" ng-model="no4[2].address" style="width: 170px">
+									<span class="showdata">{{no4[2].address}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no4[2].landNumber" rows="3" style="width: 300px"></textarea>
+									<span class="showdata">{{no4[2].landNumber}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 115px;">
+									<input type="text" ng-model="no4[3].address" style="width: 170px">
+									<span class="showdata">{{no4[3].address}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no4[3].landNumber" rows="3" style="width: 300px"></textarea>
+									<span class="showdata">{{no4[3].landNumber}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 115px;">
+									<input type="text" ng-model="no4[4].address" style="width: 170px">
+									<span class="showdata">{{no4[4].address}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no4[4].landNumber" rows="3" style="width: 300px"></textarea>
+									<span class="showdata">{{no4[4].landNumber}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 115px;">
+									<input type="text" ng-model="no4[5].address" style="width: 170px">
+									<span class="showdata">{{no4[5].address}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no4[5].landNumber" rows="3" style="width: 300px"></textarea>
+									<span class="showdata">{{no4[5].landNumber}}</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 110px;">
+									<input type="text" ng-model="no4[6].address" style="width: 170px">
+									<span class="showdata">{{no4[6].address}}</span>
+								</td>
+								<td>
+									<textarea ng-model="no4[6].landNumber" rows="3" style="width: 300px"></textarea>
+									<span class="showdata">{{no4[6].landNumber}}</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+</div>

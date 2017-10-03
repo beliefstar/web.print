@@ -1,0 +1,1042 @@
+﻿<div class="container-fluid view-content">
+	<div class="row">
+		<div class="col-xs-12">
+			<button type="button" ng-click="goback()" class="btn btn-primary pull-left">返回</button>
+			<button type="button" ng-click="Print()" class="btn btn-primary pull-right">打印当前页</button>
+			<button id="savedatabtn" type="button" ng-click="Save()" style="margin-right: 10px;" class="btn btn-primary pull-right">保存</button>
+		</div>
+	</div>
+	
+	<div style="display: none;" id="pageID"></div>
+	<div class="print-wrapper">
+		<div class="table-data-load">
+			<img src="style/image/page-loading.gif" alt="loading...">
+		</div>
+		<!-- 上一张 -->
+		<div class="show-table-prev" ng-click="slide_prev()">
+			<<上一张
+		</div>
+		<!-- 下一张 -->
+		<div class="show-table-next" ng-click="slide_next()">
+			下一张>>
+		</div>
+		<!-- NO.2 -->
+		<div class="table-item active">
+			<div class="table-wrapper" style="position:relative;width: 664px;height: 952px;margin: 0 auto;font-family: 'SimHei';color: #000;padding: 0px 30px;padding-top:60px;font-size: 24px;transform: translateY(-50px);">
+
+				<div class="table-data">
+					<div style="position: absolute;top: 130px;left: 95px;">
+						<input type="text" ng-model="alldata[0].info1" style="width: 110px;height: 30px;">
+						<span>{{alldata[0].info1}}</span>
+					</div>
+					<div style="position: absolute;top: 130px;left: 375px;">
+						<input type="text" ng-model="alldata[0].info2" style="width: 105px;height: 30px;"><span>{{alldata[0].info2}}</span>
+					</div>
+					<div style="position: absolute;top: 130px;left: 530px;">
+						<input type="text" ng-model="alldata[0].info3" style="width: 45px;height: 30px;"><span>{{alldata[0].info3}}</span>
+					</div>
+					<div style="position: absolute;bottom: 170px;left: 450px;">
+						<input type="text" ng-model="alldata[0].company" style="width: 120px;height: 30px;"><span>{{alldata[0].company}}</span>
+					</div>
+					<div style="position: absolute;bottom: 118px;left: 370px;">
+						<input type="text" ng-model="alldata[0].No2_year" style="width: 55px;height: 30px;"><span>{{alldata[0].No2_year}}</span>
+					</div>
+					<div style="position: absolute;bottom: 118px;left: 465px;">
+						<input type="text" ng-model="alldata[0].No2_month" style="width: 30px;height: 30px;"><span>{{alldata[0].No2_month}}</span>
+					</div>
+					<div style="position: absolute;bottom: 118px;left: 525px;">
+						<input type="text" ng-model="alldata[0].No2_date" style="width: 30px;height: 30px;"><span>{{alldata[0].No2_date}}</span>
+					</div>
+				</div>
+
+				<div class="table-head" style="padding-left: 20px;">NO.2</div>
+				<div class="table-content" style="border: 1px solid #000;padding: 30px;line-height: 2;">
+					<div style="padding-left: 15px;font-size: 24px;">
+						(<span style="display: inline-block;width: 115px;"></span>)农地经营权证(<span style="display: inline-block;width: 115px;"></span>)第<span style="display: inline-block;width: 50px;"></span>号
+					</div><br><br><br>
+					<p style="text-indent: 2em;">
+						根据《中华人民共和国农村土地承包法》、《重庆市荣昌区农村土地经营权证管理办法》（试行）规定，为巩固和完善农村基本经营制度，进一步放活农村土地经营权，维护土地承包方和经营方的合法权益，经农业行政主管部门审核，确认经营方依法取得的农村土地经营权，特发此证。
+					</p>
+					<br><br>
+					<div style="padding-left: 295px;padding-top:30px">
+						发证机关<br>
+						<span style="display: inline-block;width: 75px;"></span>年
+						<span style="display: inline-block;width: 28px;"></span>月
+						<span style="display: inline-block;width: 25px;"></span>日
+					</div>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<!-- NO.3 -->
+		<div class="table-item">
+			<div class="table-wrapper" style="position:relative;width: 664px;height: 952px;margin: 0 auto;font-family: 'SimHei';color: #000;padding:15px 30px;font-size: 16px;">
+
+				<div class="table-data">
+					<div style="position: absolute;top: 68px;left: 240px;">
+					<!-- 128 -->
+						<input type="text" ng-model="alldata[1].name1" style="width: 360px">
+						<span class="no3name1">{{alldata[1].name1}}</span>
+					</div>
+					<div style="position: absolute;top: 164px;left: 240px;">
+					<!-- 204 -->
+						<input type="text" ng-model="alldata[1].name2" style="width: 360px">
+									<span>{{alldata[1].name2}}</span>
+					</div>
+					<div style="position: absolute;top: 250px;left: 240px;">
+					<!-- 280 -->
+						<input type="text" ng-model="alldata[1].identity" style="width: 360px">
+									<span>{{alldata[1].identity}}</span>
+					</div>
+					<div style="position: absolute;top: 320px;left: 230px;">
+					<!-- 356 -->
+						<input type="text" ng-model="alldata[1].landAddress_zhen" style="width: 75px"><span>{{alldata[1].landAddress_zhen}}</span>
+					</div>
+					<div style="position: absolute;top: 320px;left: 395px;">
+					<!-- 356 -->
+						<input type="text" ng-model="alldata[1].landAddress_cun" style="width: 75px"><span>{{alldata[1].landAddress_cun}}</span>
+					</div>
+					<div style="position: absolute;top: 320px;left: 565px;">
+						<input type="text" ng-model="alldata[1].landAddress_zu" style="width: 40px"><span>{{alldata[1].landAddress_zu}}</span>
+					</div>
+					<div style="position: absolute;top: 425px;left: 240px;">
+					<!-- 432 -->
+						<input type="text" ng-model="alldata[1].landArea" style="width: 360px">
+									<span>{{alldata[1].landArea}}</span>
+					</div>
+					<div style="position: absolute;top: 500px;left: 240px;">
+					<!-- 508 -->
+						<input type="text" ng-model="alldata[1].landTotal" style="width: 360px">
+									<span>{{alldata[1].landTotal}}</span>
+					</div>
+					<div style="position: absolute;top: 595px;left: 240px;">
+					<!-- 584 -->
+						<input type="text" ng-model="alldata[1].circulationMode" style="width: 360px">
+									<span>{{alldata[1].circulationMode}}</span>
+					</div>
+					<div style="position: absolute;top: 675px;left: 240px;">
+					<!-- 660 -->
+						<input type="text" ng-model="alldata[1].payment" style="width: 360px">
+									<span>{{alldata[1].payment}}</span>
+					</div>
+					<div style="position: absolute;top: 757px;left: 231px;">
+					<!-- 736 240-->
+						<input type="text" ng-model="alldata[1].term_begin_year" style="width: 50px">
+									<span>{{alldata[1].term_begin_year}}</span>
+					</div>
+					<div style="position: absolute;top: 757px;left: 306px;">
+					<!--0 312 -->
+						<input type="text" ng-model="alldata[1].term_begin_month" style="width: 30px">
+									<span>{{alldata[1].term_begin_month}}</span>
+					</div>
+					<div style="position: absolute;top: 757px;left: 356px;">
+					<!--0 360 -->
+						<input type="text" ng-model="alldata[1].term_begin_date" style="width: 40px">
+									<span>{{alldata[1].term_begin_date}}</span>
+					</div>
+					<div style="position: absolute;top: 757px;left: 451px;">
+						<input type="text" ng-model="alldata[1].term_over_year" style="width: 45px">
+									<span>{{alldata[1].term_over_year}}</span>
+					</div>
+					<div style="position: absolute;top: 757px;left: 508px;">
+						<input type="text" ng-model="alldata[1].term_over_month" style="width: 24px">
+									<span>{{alldata[1].term_over_month}}</span>
+					</div>
+					<div style="position: absolute;top: 757px;left: 561px;">
+						<input type="text" ng-model="alldata[1].term_over_date" style="width: 22px">
+									<span>{{alldata[1].term_over_date}}</span>
+					</div>
+					<div style="position: absolute;top: 850px;left: 240px;">
+					<!-- 812 -->
+						<input type="text" ng-model="alldata[1].purpose" style="width: 360px">
+									<span>{{alldata[1].purpose}}</span>
+					</div>
+				</div>
+			
+
+				<div class="table-head" style="padding-left: 20px;font-size: 20px;position: relative;">NO.3
+					<div style="position: absolute;top: 0;left: 0;width: 100%;text-align: center;font-family: '宋体';font-weight: bold;font-size: 22px;">
+						农村土地经营权基本情况登记表
+					</div>
+				</div>
+				<div class="table-content">
+					<table border="1" style="border-color: #000;" cellspacing="0">
+						<tbody>
+							<tr style="width: 100%;">
+								<td align="center" style="width:200px;height: 85px">经营业主名称</td>
+								<td style="width: 403px;padding-left: 10px;">
+									
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">法定代表人姓名</td>
+								<td style="padding-left: 10px;">
+									
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 80px">身份证号码</td>	
+								<td style="padding-left: 10px;">
+									
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 95px">土地区位</td>
+								<td style="padding-left: 10px;">
+									<span style="display: inline-block;width: 70px"></span>
+									镇(街道)
+									<span style="display: inline-block;width: 85px"></span>
+									村(社区)
+									<span style="display: inline-block;width: 45px"></span>
+									组
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">土地总面积（亩）</td>
+								<td style="padding-left: 10px;">
+									
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">地块总数（块）</td>
+								<td style="padding-left: 10px;">
+									
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">土地流转方式</td>
+								<td style="padding-left: 10px;">
+									
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">流转费支付方式</td>
+								<td style="padding-left: 10px;">
+									
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">经营期限</td>
+								<td style="padding-left: 0px; font-size: 12px">
+									<span style="display: inline-block;width: 55px"></span>年
+									<span style="display: inline-block;width: 35px"></span>月
+									<span style="display: inline-block;width: 52px"></span>日起至
+									<span style="display: inline-block;width: 45px"></span>年
+									<span style="display: inline-block;width: 26px"></span>月
+									<span style="display: inline-block;width: 23px"></span>日止
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="height: 85px">土地用途</td>
+								<td style="padding-left: 10px;">
+									
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- NO.4 -->
+		<div class="table-item">
+			<div class="table-wrapper" style="position:relative;width: 664px;height: 952px;margin: 0 auto;font-family: 'SimHei';color: #000;padding:0px 20px;padding-top:80px;font-size: 16px;transform: translateY(-50px);">
+
+				<div class="table-data">
+					<div style="position: absolute;top: 210px;left: 80px;">
+						<input type="text" ng-model="alldata[2].no4[0].address" style="width: 170px">
+									<span>{{alldata[2].no4[0].address}}</span>
+					</div>
+					<div style="position: absolute;top: 200px;left: 300px;">
+						<input type="text" ng-model="alldata[2].no4[0].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[2].no4[0].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 320px;left: 80px;">
+						<input type="text" ng-model="alldata[2].no4[1].address" style="width: 170px">
+									<span>{{alldata[2].no4[1].address}}</span>
+					</div>
+					<div style="position: absolute;top: 310px;left: 300px;">
+						<input type="text" ng-model="alldata[2].no4[1].landNumber" style="width: 300px">
+									<span class="dibianhao" class="dibianhao">{{alldata[2].no4[1].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 430px;left: 80px;">
+						<input type="text" ng-model="alldata[2].no4[2].address" style="width: 170px">
+									<span>{{alldata[2].no4[2].address}}</span>
+					</div>
+					<div style="position: absolute;top: 420px;left: 300px;">
+						<input type="text" ng-model="alldata[2].no4[2].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[2].no4[2].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 540px;left: 80px;">
+						<input type="text" ng-model="alldata[2].no4[3].address" style="width: 170px">
+									<span>{{alldata[2].no4[3].address}}</span>
+					</div>
+					<div style="position: absolute;top: 530px;left: 300px;">
+						<input type="text" ng-model="alldata[2].no4[3].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[2].no4[3].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 640px;left: 80px;">
+						<input type="text" ng-model="alldata[2].no4[4].address" style="width: 170px">
+									<span>{{alldata[2].no4[4].address}}</span>
+					</div>
+					<div style="position: absolute;top: 630px;left: 300px;">
+						<input type="text" ng-model="alldata[2].no4[4].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[2].no4[4].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 760px;left: 80px;">
+						<input type="text" ng-model="alldata[2].no4[5].address" style="width: 170px">
+									<span>{{alldata[2].no4[5].address}}</span>
+					</div>
+					<div style="position: absolute;top: 750px;left: 300px;">
+						<input type="text" ng-model="alldata[2].no4[5].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[2].no4[5].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 875px;left: 80px;">
+						<input type="text" ng-model="alldata[2].no4[6].address" style="width: 170px">
+									<span>{{alldata[2].no4[6].address}}</span>
+					</div>
+					<div style="position: absolute;top: 865px;left: 300px;">
+						<input type="text" ng-model="alldata[2].no4[6].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[2].no4[6].landNumber}}</span>
+					</div>
+				</div>
+
+				<div class="table-head" style="padding-left: 20px;font-size: 20px;position: relative;">NO.4
+					<div style="position: absolute;top: 0;left: 0;width: 100%;text-align: center;font-family: '宋体';font-weight: bold;font-size: 22px;">
+						农村土地经营权地块登记表（一）
+					</div>
+				</div>
+				<div class="table-content" style="font-size: 18px;">
+					<table border="1" style="border-color: #000;text-align: center;" cellspacing="0">
+						<tbody>
+							<tr style="height: 76px;">
+								<td style="width:253px;padding: 20px 0;">位置（村组）</td>
+								<td style="width: 370px">地块编号</td>
+							</tr>
+							<tr>
+								<td style="height: 100px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 105px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 105px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 110px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 110px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 110px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 110px;"></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- NO.5 -->
+		<div class="table-item">
+			<div class="table-wrapper" style="position:relative;width: 664px;height: 952px;margin: 0 auto;font-family: 'SimHei';color: #000;padding:0px 20px;padding-top:20px;font-size: 16px;">
+
+				<div class="table-data">
+					<div style="position: absolute;top: 168px;left: 80px;">
+						<input type="text" ng-model="alldata[5].no5[0].address" style="width: 170px">
+									<span>{{alldata[5].no5[0].address}}</span>
+					</div>
+					<div style="position: absolute;top: 158px;left: 300px;">
+						<input type="text" ng-model="alldata[5].no5[0].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[5].no5[0].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 273px;left: 80px;">
+						<input type="text" ng-model="alldata[5].no5[1].address" style="width: 170px">
+									<span>{{alldata[5].no5[1].address}}</span>
+					</div>
+					<div style="position: absolute;top: 263px;left: 300px;">
+						<input type="text" ng-model="alldata[5].no5[1].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[5].no5[1].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 375px;left: 80px;">
+						<input type="text" ng-model="alldata[5].no5[2].address" style="width: 170px">
+									<span>{{alldata[5].no5[2].address}}</span>
+					</div>
+					<div style="position: absolute;top: 365px;left: 300px;">
+						<input type="text" ng-model="alldata[5].no5[2].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[5].no5[2].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 498px;left: 80px;">
+						<input type="text" ng-model="alldata[5].no5[3].address" style="width: 170px">
+									<span>{{alldata[5].no5[3].address}}</span>
+					</div>
+					<div style="position: absolute;top: 488px;left: 300px;">
+						<input type="text" ng-model="alldata[5].no5[3].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[5].no5[3].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 610px;left: 80px;">
+						<input type="text" ng-model="alldata[5].no5[4].address" style="width: 170px">
+									<span>{{alldata[5].no5[4].address}}</span>
+					</div>
+					<div style="position: absolute;top: 600px;left: 300px;">
+						<input type="text" ng-model="alldata[5].no5[4].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[5].no5[4].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 716px;left: 80px;">
+						<input type="text" ng-model="alldata[5].no5[5].address" style="width: 170px">
+									<span>{{alldata[5].no5[5].address}}</span>
+					</div>
+					<div style="position: absolute;top: 706px;left: 300px;">
+						<input type="text" ng-model="alldata[5].no5[5].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[5].no5[5].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 820px;left: 80px;">
+						<input type="text" ng-model="alldata[5].no5[6].address" style="width: 170px">
+									<span>{{alldata[5].no5[6].address}}</span>
+					</div>
+					<div style="position: absolute;top: 810px;left: 300px;">
+						<input type="text" ng-model="alldata[5].no5[6].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[5].no5[6].landNumber}}</span>
+					</div>
+				</div>
+
+				<div class="table-head" style="padding-left: 20px;font-size: 20px;position: relative;">NO.5
+					<div style="position: absolute;top: 0;left: 0;width: 100%;text-align: center;font-family: '宋体';font-weight: bold;font-size: 22px;">
+						农村土地经营权地块登记表（二）
+					</div>
+				</div>
+				<div class="table-content" style="font-size: 18px;">
+					<table border="1" style="border-color: #000;text-align: center;" cellspacing="0">
+						<tbody>
+							<tr style="height: 76px;">
+								<td style="width:253px;padding: 20px 0;">位置（村组）</td>
+								<td style="width: 370px">地块编号</td>
+							</tr>
+							<tr>
+								<td style="height: 100px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 105px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 110px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 115px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 115px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 110px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 110px;"></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- NO.6 -->
+		<div class="table-item">
+			<div class="table-wrapper" style="position:relative;width: 664px;height: 952px;margin: 0 auto;font-family: 'SimHei';color: #000;padding:80px 20px;font-size: 16px;">
+
+				<div class="table-data">
+					<div style="position: absolute;top: 210px;left: 80px;">
+						<input type="text" ng-model="alldata[6].no6[0].address" style="width: 170px">
+									<span>{{alldata[6].no6[0].address}}</span>
+					</div>
+					<div style="position: absolute;top: 200px;left: 300px;">
+						<input type="text" ng-model="alldata[6].no6[0].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[6].no6[0].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 320px;left: 80px;">
+						<input type="text" ng-model="alldata[6].no6[1].address" style="width: 170px">
+									<span>{{alldata[6].no6[1].address}}</span>
+					</div>
+					<div style="position: absolute;top: 310px;left: 300px;">
+						<input type="text" ng-model="alldata[6].no6[1].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[6].no6[1].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 430px;left: 80px;">
+						<input type="text" ng-model="alldata[6].no6[2].address" style="width: 170px">
+									<span>{{alldata[6].no6[2].address}}</span>
+					</div>
+					<div style="position: absolute;top: 420px;left: 300px;">
+						<input type="text" ng-model="alldata[6].no6[2].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[6].no6[2].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 540px;left: 80px;">
+						<input type="text" ng-model="alldata[6].no6[3].address" style="width: 170px">
+									<span>{{alldata[6].no6[3].address}}</span>
+					</div>
+					<div style="position: absolute;top: 530px;left: 300px;">
+						<input type="text" ng-model="alldata[6].no6[3].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[6].no6[3].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 640px;left: 80px;">
+						<input type="text" ng-model="alldata[6].no6[4].address" style="width: 170px">
+									<span>{{alldata[6].no6[4].address}}</span>
+					</div>
+					<div style="position: absolute;top: 630px;left: 300px;">
+						<input type="text" ng-model="alldata[6].no6[4].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[6].no6[4].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 760px;left: 80px;">
+						<input type="text" ng-model="alldata[6].no6[5].address" style="width: 170px">
+									<span>{{alldata[6].no6[5].address}}</span>
+					</div>
+					<div style="position: absolute;top: 750px;left: 300px;">
+						<input type="text" ng-model="alldata[6].no6[5].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[6].no6[5].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 875px;left: 80px;">
+						<input type="text" ng-model="alldata[6].no6[6].address" style="width: 170px">
+									<span>{{alldata[6].no6[6].address}}</span>
+					</div>
+					<div style="position: absolute;top: 865px;left: 300px;">
+						<input type="text" ng-model="alldata[6].no6[6].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[6].no6[6].landNumber}}</span>
+					</div>
+				</div>
+
+				<div class="table-head" style="padding-left: 20px;font-size: 20px;position: relative;">NO.6
+					<div style="position: absolute;top: 0;left: 0;width: 100%;text-align: center;font-family: '宋体';font-weight: bold;font-size: 22px;">
+						农村土地经营权地块登记表（三）
+					</div>
+				</div>
+				<div class="table-content" style="font-size: 18px;">
+					<table border="1" style="border-color: #000;text-align: center;" cellspacing="0">
+						<tbody>
+							<tr style="height: 76px;">
+								<td style="width:253px;padding: 20px 0;">位置（村组）</td>
+								<td style="width: 370px">地块编号</td>
+							</tr>
+							<tr>
+								<td style="height: 96px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 96px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 100px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 105px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 110px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 120px;"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td style="height: 120px;"></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- NO.7 -->
+		<div class="table-item">
+			<div class="table-wrapper" style="position:relative;width: 664px;height: 952px;margin: 0 auto;font-family: 'SimHei';color: #000;padding:0px 20px;padding-top:20px;font-size: 16px;">
+
+				<div class="table-data">
+					<div style="position: absolute;top: 168px;left: 80px;">
+						<input type="text" ng-model="alldata[7].no7[0].address" style="width: 170px">
+									<span>{{alldata[7].no7[0].address}}</span>
+					</div>
+					<div style="position: absolute;top: 158px;left: 300px;">
+						<input type="text" ng-model="alldata[7].no7[0].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[7].no7[0].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 283px;left: 80px;">
+						<input type="text" ng-model="alldata[7].no7[1].address" style="width: 170px">
+									<span>{{alldata[7].no7[1].address}}</span>
+					</div>
+					<div style="position: absolute;top: 273px;left: 300px;">
+						<input type="text" ng-model="alldata[7].no7[1].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[7].no7[1].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 395px;left: 80px;">
+						<input type="text" ng-model="alldata[7].no7[2].address" style="width: 170px">
+									<span>{{alldata[7].no7[2].address}}</span>
+					</div>
+					<div style="position: absolute;top: 385px;left: 300px;">
+						<input type="text" ng-model="alldata[7].no7[2].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[7].no7[2].landNumber}}</span>
+					</div>
+					<div style="position: absolute;top: 516px;left: 80px;">
+						<input type="text" ng-model="alldata[7].no7[3].address" style="width: 170px">
+									<span>{{alldata[7].no7[3].address}}</span>
+					</div>
+					<div style="position: absolute;top: 506px;left: 300px;">
+						<input type="text" ng-model="alldata[7].no7[3].landNumber" style="width: 300px">
+									<span class="dibianhao">{{alldata[7].no7[3].landNumber}}</span>
+					</div>
+					<div style="position: absolute;bottom: 90px;left: 441px;">
+						<input type="text" ng-model="alldata[3].no7_date_year" style="width: 50px"><span>{{alldata[3].no7_date_year}}</span>
+					</div>
+					<div style="position: absolute;bottom: 90px;left: 506px;">
+						<input type="text" ng-model="alldata[3].no7_date_month" style="width: 37px"><span>{{alldata[3].no7_date_month}}</span>
+					</div>
+					<div style="position: absolute;bottom: 90px;left: 561px;">
+						<input type="text" ng-model="alldata[3].no7_date_date" style="width: 40px"><span>{{alldata[3].no7_date_date}}</span>
+					</div>
+				</div>
+
+				<div class="table-head" style="padding-left: 20px;font-size: 20px;position: relative;">NO.7
+					<div style="position: absolute;top: 0;left: 0;width: 100%;text-align: center;font-family: '宋体';font-weight: bold;font-size: 22px;">
+						农村土地经营权地块登记表（四）
+					</div>
+				</div>
+				<div class="table-content" style="font-size: 18px;">
+					<table border="1" style="border-color: #000;text-align: center;" cellspacing="0">
+						<tbody>
+							<tr style="height: 76px;">
+								<td style="width:250px;padding: 20px 0;">位置（村组）</td>
+								<td>地块编号</td>
+							</tr>
+							<tr>
+								<td style="height: 105px">
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 110px">
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 110px">
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 110px">
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height:390px;">
+									登<br>记<br>机<br>关
+								</td>
+								<td style="padding: 0px 20px;text-align: left;font-family: '楷体';line-height: 1.8;">
+									<p style="text-indent: 2em">经审查，符合《重庆市荣昌区农村土地经权证管理办法》（试行）相关规定。特发此证。</p><br>
+									<div style="padding-left: 100px;padding-top: 25px" class="dengjijiguan">
+										登记机关（盖章）
+										<div>
+											<span style="display: inline-block;width: 102px;"></span>年
+											<span style="display: inline-block;width: 25px;"></span>月
+											<span style="display: inline-block;width: 30px;"></span>日
+										</div>
+									</div>
+									
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- NO.8 -->
+		<div class="table-item">
+			<div class="table-wrapper" style="position:relative;width: 664px;height: 952px;margin: 0 auto;font-family: 'SimHei';color: #000;padding:80px 20px;font-size: 16px;">
+
+				<div class="table-data" id="no8input">
+					<div style="position: absolute;top: 200px;left: 45px;">
+						<input type="text" ng-model="alldata[4].no8[0].changeMode">
+									<span>{{alldata[4].no8[0].changeMode}}</span>
+					</div>
+					<div style="position: absolute;top: 200px;left: 173px;">
+						<input type="text" ng-model="alldata[4].no8[0].area">
+									<span>{{alldata[4].no8[0].area}}</span>
+					</div>
+					<div style="position: absolute;top: 200px;left: 290px;">
+						<input type="text" ng-model="alldata[4].no8[0].hetongID">
+									<span class="hetongID">{{alldata[4].no8[0].hetongID}}</span>
+					</div>
+					<div style="position: absolute;top: 200px;left: 415px;">
+						<input type="text" ng-model="alldata[4].no8[0].landID">
+									<span class="landID">{{alldata[4].no8[0].landID}}</span>
+					</div>
+
+					<div style="position: absolute;top: 200px;left: 540px;">
+						<input type="text" ng-model="alldata[4].no8[0].info">
+									<span>{{alldata[4].no8[0].info}}</span>
+					</div>
+					<div style="position: absolute;top: 280px;left: 45px;">
+						<input type="text" ng-model="alldata[4].no8[1].changeMode">
+									<span>{{alldata[4].no8[1].changeMode}}</span>
+					</div>
+					<div style="position: absolute;top: 280px;left: 173px;">
+						<input type="text" ng-model="alldata[4].no8[1].area">
+									<span>{{alldata[4].no8[1].area}}</span>
+					</div>
+					<div style="position: absolute;top: 280px;left: 290px;">
+						<input type="text" ng-model="alldata[4].no8[1].hetongID">
+									<span class="hetongID">{{alldata[4].no8[1].hetongID}}</span>
+					</div>
+					<div style="position: absolute;top: 280px;left: 415px;">
+						<input type="text" ng-model="alldata[4].no8[1].landID">
+									<span class="landID">{{alldata[4].no8[1].landID}}</span>
+					</div>
+					<div style="position: absolute;top: 280px;left: 540px;">
+						<input type="text" ng-model="alldata[4].no8[1].info">
+									<span>{{alldata[4].no8[1].info}}</span>
+					</div>
+					<div style="position: absolute;top: 356px;left: 45px;">
+						<input type="text" ng-model="alldata[4].no8[2].changeMode">
+									<span>{{alldata[4].no8[2].changeMode}}</span>
+					</div>
+					<div style="position: absolute;top: 356px;left: 173px;">
+						<input type="text" ng-model="alldata[4].no8[2].area">
+									<span>{{alldata[4].no8[2].area}}</span>
+					</div>
+					<div style="position: absolute;top: 356px;left: 290px;">
+						<input type="text" ng-model="alldata[4].no8[2].hetongID">
+									<span class="hetongID">{{alldata[4].no8[2].hetongID}}</span>
+					</div>
+					<div style="position: absolute;top: 356px;left: 415px;">
+						<input type="text" ng-model="alldata[4].no8[2].landID">
+									<span class="landID">{{alldata[4].no8[2].landID}}</span>
+					</div>
+					<div style="position: absolute;top: 356px;left: 540px;">
+						<input type="text" ng-model="alldata[4].no8[2].info">
+									<span>{{alldata[4].no8[2].info}}</span>
+					</div>
+					<div style="position: absolute;top: 448px;left: 45px;">
+						<input type="text" ng-model="alldata[4].no8[3].changeMode">
+									<span>{{alldata[4].no8[3].changeMode}}</span>
+					</div>
+					<div style="position: absolute;top: 448px;left: 173px;">
+						<input type="text" ng-model="alldata[4].no8[3].area">
+									<span>{{alldata[4].no8[3].area}}</span>
+					</div>
+					<div style="position: absolute;top: 448px;left: 290px;">
+						<input type="text" ng-model="alldata[4].no8[3].hetongID">
+									<span class="hetongID">{{alldata[4].no8[3].hetongID}}</span>
+					</div>
+					<div style="position: absolute;top: 448px;left: 415px;">
+						<input type="text" ng-model="alldata[4].no8[3].landID">
+									<span class="landID">{{alldata[4].no8[3].landID}}</span>
+					</div>
+					<div style="position: absolute;top: 448px;left: 540px;">
+						<input type="text" ng-model="alldata[4].no8[3].info">
+									<span>{{alldata[4].no8[3].info}}</span>
+					</div>
+					<div style="position: absolute;top: 530px;left: 45px;">
+						<input type="text" ng-model="alldata[4].no8[4].changeMode">
+									<span>{{alldata[4].no8[4].changeMode}}</span>
+					</div>
+					<div style="position: absolute;top: 530px;left: 173px;">
+						<input type="text" ng-model="alldata[4].no8[4].area">
+									<span>{{alldata[4].no8[4].area}}</span>
+					</div>
+					<div style="position: absolute;top: 530px;left: 290px;">
+						<input type="text" ng-model="alldata[4].no8[4].hetongID">
+									<span class="hetongID">{{alldata[4].no8[4].hetongID}}</span>
+					</div>
+					<div style="position: absolute;top: 530px;left: 415px;">
+						<input type="text" ng-model="alldata[4].no8[4].landID">
+									<span class="landID">{{alldata[4].no8[4].landID}}</span>
+					</div>
+					<div style="position: absolute;top: 530px;left: 540px;">
+						<input type="text" ng-model="alldata[4].no8[4].info">
+									<span>{{alldata[4].no8[4].info}}</span>
+					</div>
+					<div style="position: absolute;top: 620px;left: 45px;">
+						<input type="text" ng-model="alldata[4].no8[5].changeMode">
+									<span>{{alldata[4].no8[5].changeMode}}</span>
+					</div>
+					<div style="position: absolute;top: 620px;left: 173px;">
+						<input type="text" ng-model="alldata[4].no8[5].area">
+									<span>{{alldata[4].no8[5].area}}</span>
+					</div>
+					<div style="position: absolute;top: 620px;left: 290px;">
+						<input type="text" ng-model="alldata[4].no8[5].hetongID">
+									<span class="hetongID">{{alldata[4].no8[5].hetongID}}</span>
+					</div>
+					<div style="position: absolute;top: 620px;left: 415px;">
+						<input type="text" ng-model="alldata[4].no8[5].landID">
+									<span class="landID">{{alldata[4].no8[5].landID}}</span>
+					</div>
+					<div style="position: absolute;top: 620px;left: 540px;">
+						<input type="text" ng-model="alldata[4].no8[5].info">
+									<span>{{alldata[4].no8[5].info}}</span>
+					</div>
+					<div style="position: absolute;top: 700px;left: 45px;">
+						<input type="text" ng-model="alldata[4].no8[6].changeMode">
+									<span>{{alldata[4].no8[6].changeMode}}</span>
+					</div>
+					<div style="position: absolute;top: 700px;left: 173px;">
+						<input type="text" ng-model="alldata[4].no8[6].area">
+									<span>{{alldata[4].no8[6].area}}</span>
+					</div>
+					<div style="position: absolute;top: 700px;left: 290px;">
+						<input type="text" ng-model="alldata[4].no8[6].hetongID">
+									<span class="hetongID">{{alldata[4].no8[6].hetongID}}</span>
+					</div>
+					<div style="position: absolute;top: 700px;left: 415px;">
+						<input type="text" ng-model="alldata[4].no8[6].landID">
+									<span class="landID">{{alldata[4].no8[6].landID}}</span>
+					</div>
+					<div style="position: absolute;top: 700px;left: 540px;">
+						<input type="text" ng-model="alldata[4].no8[6].info">
+									<span>{{alldata[4].no8[6].info}}</span>
+					</div>
+					<div style="position: absolute;top: 795px;left: 45px;">
+						<input type="text" ng-model="alldata[4].no8[7].changeMode">
+									<span>{{alldata[4].no8[7].changeMode}}</span>
+					</div>
+					<div style="position: absolute;top: 795px;left: 173px;">
+						<input type="text" ng-model="alldata[4].no8[7].area">
+									<span>{{alldata[4].no8[7].area}}</span>
+					</div>
+					<div style="position: absolute;top: 795px;left: 290px;">
+						<input type="text" ng-model="alldata[4].no8[7].hetongID">
+									<span class="hetongID">{{alldata[4].no8[7].hetongID}}</span>
+					</div>
+					<div style="position: absolute;top: 795px;left: 415px;">
+						<input type="text" ng-model="alldata[4].no8[7].landID">
+									<span class="landID">{{alldata[4].no8[7].landID}}</span>
+					</div>
+					<div style="position: absolute;top: 795px;left: 540px;">
+						<input type="text" ng-model="alldata[4].no8[7].info">
+									<span>{{alldata[4].no8[7].info}}</span>
+					</div>
+					<div style="position: absolute;top: 880px;left: 45px;">
+						<input type="text" ng-model="alldata[4].no8[8].changeMode">
+									<span>{{alldata[4].no8[8].changeMode}}</span>
+					</div>
+					<div style="position: absolute;top: 880px;left: 173px;">
+						<input type="text" ng-model="alldata[4].no8[8].area">
+									<span>{{alldata[4].no8[8].area}}</span>
+					</div>
+					<div style="position: absolute;top: 880px;left: 290px;">
+						<input type="text" ng-model="alldata[4].no8[8].hetongID">
+									<span class="hetongID">{{alldata[4].no8[8].hetongID}}</span>
+					</div>
+					<div style="position: absolute;top: 880px;left: 415px;">
+						<input type="text" ng-model="alldata[4].no8[8].landID">
+									<span class="landID">{{alldata[4].no8[8].landID}}</span>
+					</div>
+					<div style="position: absolute;top: 880px;left: 540px;">
+						<input type="text" ng-model="alldata[4].no8[8].info">
+									<span>{{alldata[4].no8[8].info}}</span>
+					</div>
+				</div>
+
+				<div class="table-head" style="padding-left: 20px;font-size: 20px;position: relative;">NO.8
+					<div style="position: absolute;top: 0;left: 0;width: 100%;text-align: center;font-family: '宋体';font-weight: bold;font-size: 22px;">
+						农村土地经营权变更登记
+					</div>
+				</div>
+				<div class="table-content" style="font-size: 16px;">
+					<table border="1" style="border-color: #000;text-align: center;width: 100%" cellspacing="0">
+						<tbody>
+							<tr style="height: 76px;">
+								<td style="width: 115px;padding: 5px 8px">变更方式</td>
+								<td style="width: 95px;padding: 5px 8px">面积（亩）</td>
+								<td style="width: 100px;padding: 5px 8px">合同编号</td>
+								<td style="width: 100px;padding: 5px 8px">地块编号</td>
+								<td style="width: 107px;padding: 5px 8px">登记机关<br>签章及日期</td>
+							</tr>
+							<tr>
+								<td style="height: 76px;">
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 76px;">
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 76px;">
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 78px;">
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 78px;">
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 83px;">
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 86px;">
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 90px;">
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 94px;">
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

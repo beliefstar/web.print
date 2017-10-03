@@ -1,0 +1,86 @@
+<div class="container-fluid view-content">
+	<div class="row">
+		<div class="col-xs-12">
+			<button type="button" ng-click="goback()" class="btn btn-primary pull-left">返回</button>
+			<button type="button" ng-click="Print()" class="btn btn-primary pull-right">打印当前页</button>
+			<button id="savedatabtn" type="button" ng-click="Save()" style="margin-right: 10px;" class="btn btn-primary pull-right">保存</button>
+		</div>
+	</div>
+	
+	<div class="print-wrapper">
+		<div class="table-data-load">
+			<img src="style/image/page-loading.gif" alt="loading...">
+		</div>
+		<!-- 下一张 -->
+		<div class="show-table-next" ng-click="slide_next()">
+			下一张>>
+		</div>
+		<!-- NO.2 -->
+		<div class="table-item">
+			<div class="table-wrapper" style="position:relative;width: 628px;height: 900px;margin: 0 auto;font-family: 'SimHei';color: #000;padding: 0px 30px;padding-top:60px;font-size: 24px;transform: translateY(-50px);">
+
+				<div class="table-data">
+					<div style="position: absolute;top: 144px;left: 110px;">
+						
+						<span style="width: 64px;text-align: center;">{{info1}}</span>
+					</div>
+					<div style="position: absolute;top: 144px;left: 344px;">
+						
+						<span  style="width: 80px;text-align: center;">{{info2}}</span>
+					</div>
+					<div style="position: absolute;top: 144px;left: 469px;">
+						
+						<span  style="width: 50px;text-align: center;">{{info3}}</span>
+					</div>
+					<div style="position: absolute;bottom: 216px;left: 416px;">
+						
+						<span  style="width: 80px;text-align: center;">{{company}}</span>
+					</div>
+					<div style="position: absolute;bottom: 171px;left: 340px;">
+						
+						<span  style="width: 40px;text-align: center;">{{No2_year}}</span>
+					</div>
+					<div style="position: absolute;bottom: 171px;left: 409px;">
+						
+						<span  style="width: 40px;text-align: center;">{{No2_month}}</span>
+					</div>
+					<div style="position: absolute;bottom: 171px;left: 465px;">
+						
+						<span  style="width: 40px;text-align: center;">{{No2_date}}</span>
+					</div>
+				</div>
+
+				<div class="table-head" style="padding-left: 20px;">NO.2</div>
+				<div class="table-content" style="border: 1px solid #000;padding: 30px;padding-top:40px;line-height: 2;">
+					<div style="padding-left: 34px;font-size: 22px;">
+						(
+							<input type="text" ng-model="info1" style="width: 60px;height: 30px;">
+							<span class="zhanwei" style="width: 50px"></span>
+						)农地经营权证(
+							<input type="text" ng-model="info2" style="width: 60px;height: 30px;">
+							<span class="zhanwei" style="width: 50px"></span>
+						)第
+							<input type="text" ng-model="info3" style="width: 35px;height: 30px;">
+							<span class="zhanwei" style="width: 50px"></span>
+						号
+					</div><br>
+					<p style="text-indent: 2em;">
+						根据《中华人民共和国农村土地承包法》、《重庆市荣昌区农村土地经营权证管理办法》（试行）规定，为巩固和完善农村基本经营制度，进一步放活农村土地经营权，维护土地承包方和经营方的合法权益，经农业行政主管部门审核，确认经营方依法取得的农村土地经营权，特发此证。
+					</p>
+					<br>
+					<div style="padding-left: 275px;padding-top:35px;font-size: 18px">
+						发证机关<input type="text" ng-model="company" style="width: 120px;height: 30px;"><br>
+						<input type="text" ng-model="No2_year" style="width: 50px;height: 30px;">
+						<span class="zhanwei" style="width: 50px"></span>年
+						<input type="text" ng-model="No2_month" style="width: 30px;height: 30px;">
+						<span class="zhanwei" style="width: 22px"></span>月
+						<input type="text" ng-model="No2_date" style="width: 30px;height: 30px;">
+						<span class="zhanwei" style="width: 35px"></span>日
+					</div>
+					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
